@@ -21,60 +21,62 @@ The name of a variable, function, or class, should answer all the big questions.
 - **Use intention revealing names**
 Variable name must define the exact explanation of its content so it can documentate itself in case of no documentation.
     ```
-    var d; // elapsed time in days
+    var d // elapsed time in days
     ```
 
     vs
 
     ```
-    var elapsedTimeInDays;
+    var elapsedTimeInDays
     ```
 
 - **Use pronounceable names**
     ```
-    class DtaRcrd102 {
-        private Date genymdhms;
-        private Date modymdhms;
+    class NwClmDmg {
+        private _lyt = 'dashboard';
+        private Date _modymdhms;
     }
     ```
 
     vs
 
     ```
-    class Customer {
-        private Date generationTimestamp;
-        private Date modificationTimestamp;
+    class NewClaimDamage {
+        private _layout = 'dashboard';
+        private Date _modificationTimestamp;
     }
     ```
 
 - **Use searchable names**
+If a variable or constant might be seen or used in multiple places in a body of code, it is imperative to give it a search-friendly name.
     ```
-    for (int j = 0; j < 34; j++) {
-        s += (t[j] * 4) / 5;
+    for (int item = 0; item < 34; item++) {
+        s += (t[item] * 4) / 5;
     }
     ```
 
     vs
 
     ```
-    int realDaysPerIdealDay = 4;
-    const int WORK_DAYS_PER_WEEK = 5;
-    int sum = 0;
-    for (int = 0; j < NUMBER_OF_TASKS; j++) {
-        int realTaskDays = taskEstimate[j] * realDaysPerIdealDay;
-        int realTaskWeeks = (realdays / WORK_DAYS_PER_WEEK);
+    var realDaysPerIdealDay = 4;
+    const WORK_DAYS_PER_WEEK = 5;
+    var sum = 0;
+    for (var item = 0; item < NUMBER_OF_TASKS; item++) {
+        var realTaskDays = taskEstimate[item] * realDaysPerIdealDay;
+        var realTaskWeeks = (realTaskDays / WORK_DAYS_PER_WEEK);
         sum += realTaskWeeks;
     }
     ```
 
-- **Use one consistent language** 
+- **Use one consistent language**
 Decide and use one natural language for naming, e.g. using mixed English and Bahasa names will be inconsistent and unreadable.
 
 - **There's no limit to the length of the variable name**
-Although short, cryptic variable names are to be shunned in favor of longer, descriptive names, that doesn't mean you should be using entire sentences. Extremely long names are inefficient because they make code dirty, hard-to-read-write and leading to possibilty of typo.
+Use short enough and long enough variable names in each scope of code.
+> Although short, cryptic variable names are to be shunned in favor of longer, descriptive names, that doesn't mean you should be using entire sentences. Extremely long names are inefficient because they make code dirty, hard-to-read-write and leading to possibilty of typo.
 
 
-Before we get into defining naming conventions, here are several delimiting conventions commonly used in code:
+Before we get into defining conventions, here are several delimiting conventions commonly used in code:
 
 - **Snakecase** Words are delimited by an underscore
     ```
@@ -93,58 +95,39 @@ Before we get into defining naming conventions, here are several delimiting conv
 
 - **Hungarian Notation** This notation describes the variable type or purpose at the start of the variable name, followed by a descriptor that indicates the variable’s function. The Camelcase notation is used to delimit words.
     ```
-    arrCompanyGroup  //Array called Company Group”
-    sUserName           //String called “User Name”
-    iRandomSeed         //Integer called “Random Seed”
+    arrCompanyGroup     // Array called Company Group”
+    sUserName           // String called “User Name”
+    iRandomSeed         // Integer called “Random Seed”
     ```
 
 ## Naming Conventions
 
 Consistency and readability are key ideas that should be utilized in the naming of variables. Regardless of how you choose to name your variables, always ensure that your naming conventions are consistent throughout the code. Consistency allows others to more easily understand your code.
 
-## Naming Conventions: Variable
+### Naming Conventions: Variable
 Most often variables are declared with a **camelCase**.
 
 ```
-var firstName = 'Apurva';
+var firstName = 'John';
 ```
 
-Most often PHP variables are declared with a **snake_case**.
-
-```
-$first_name = 'Apurva';
-```
-
-## Naming Conventions: Constant
+### Naming Conventions: Constant
 Constants — intended to be non-changing variables are declared in **ALL CAPS**.
 
 ```
-// PHP
-define('DB_HOST', 'localhost'); // global variable
-
-class Circle {                  // class variable
-  const PI = 3.14;
-}
-
-// JS
 var SECONDS = 60;
 ```
-Note : PHP Constants don’t use the $ prefix as the variables do.
 
-## Naming Conventions: Boolean
+### Naming Conventions: Boolean
 A prefix like `is` , `are` , `has` helps developer to distinguish a boolean from another variable by just looking at it.
 
 ```
-// PHP
-$is_visible = true;
-
-// JS
-hasKey = false;
+var isVisible = true;
+var hasKey = false;
 ```
 
-## Naming Conventions: Function
-In PHP, functions can be written in either **snake_case** or **camelCase**, decide on your approach and keep it consistent.
-Always start your function name with a **"Verb"** which defines what that function is trying to do in conjunction with the name of the **"Entity"** being affected by this function.
+### Naming Conventions: Function
+Functions names are written in **camelCase**. Always start your function name with a **"Verb"** which defines what that function is trying to do in conjunction with the name of the **"Entity"** being affected by this function.
 
 ```
 getOrder()
@@ -153,45 +136,75 @@ deleteOrder()
 connectToDatabase()
 ```
 
-## Naming Conventions: Method
-In PHP, functions can be written in either **snake_case** or **camelCase**, decide on your approach and keep it consistent.
-As class name itself depict "Entity" thus suffixing the "Entity" in a function name doesn’t make sense because it becomes self-explanatory in case of class methods.
+### Naming Conventions: Method
+Like functions, methods names are written in **camelCase**. As class name itself depict "Entity" thus suffixing the "Entity" in a function name doesn’t make sense because it becomes self-explanatory in case of class methods.
 
 ```
 class User {
-  public function delete($id){
-    // Do something
+  delete(id) {
+    // do something
   }
 }
 
-$user = new User();
-$user->delete(2); // Delete the user with ID = 2
+var user = new User();
+console.log(user.delete(2)); // delete the user with ID = 2
 ```
 
-## Naming Conventions: Class
-A class should be declared with a **PascalCase** in its own file.
+### Naming Conventions: Class
+A class should be declared with **PascalCase** in its own file.
 
 ```
-class Circle {
-
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 }
+
+var user = new User('John', 'Doe');
 ```
 
-## Naming Conventions: Private
+### Naming Conventions: Component
+Components are widely declared with **PascalCase** too. When a component gets used, it distinguishes itself from native HTML and web components, because its first letter is always written in uppercase.
+
+```
+function UserProfile(user) {
+  return (
+    <div>
+      <span>First Name: {user.firstName}</span>
+      <span>Last Name: {user.lastName}</span>
+    </div>
+  );
+}
+
+<div>
+  <UserProfile
+    user={{ firstName: 'John', lastName: 'Doe' }}
+  />
+</div>
+```
+
+### Naming Conventions: Private
 Private and protected properties in a class MUST BE prefixed with a single underscore.
 
 ```
-class Circle {
-  public PI = 3.14;
-  private $_radius;
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.name = _getName(firstName, lastName);
+  }
 
-  private function _calculateArea() {
-    return self::PI * $_radius * $_radius;
+  _getName(firstName, lastName) {
+    return `${firstName} ${lastName}`;
   }
 }
+
+var me = new User('John', 'Doe');
+console.log(me.name);
 ```
 
-## Naming Conventions: Argument
+### Naming Conventions: Argument
 Use self-explanatory argument label that indicates more expressively the intent of the argument.
 
 ```
@@ -208,25 +221,25 @@ function getRemainder(number, divisor) {
 }
 ```
 
-## Parentheses Style
+### Parentheses Style
 Two commonly used conventions for parenthesis are: K&R Style Parentheses and  Allman Parentheses.
 
 It is recommended to use K&R Style parentheses because they save one line and seem natural.
 
 K&R Style Parentheses
 ```
-if($a == 1) {
+if(isVisible) {
   // do something
 }
 ```
 
 Allman Parentheses
 ```
-if($a == 1)
+if(isVisible)
 {
   // do something
 }
 ```
 
-## Consistency is the key!!
+### Consistency is the key!!
 The key to following conventions is consistency. You MUST ensure that you define and stick to a particular set of conventions.
