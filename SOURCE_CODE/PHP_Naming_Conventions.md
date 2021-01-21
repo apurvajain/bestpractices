@@ -1,4 +1,4 @@
-# Basics of Naming Convetions for Devlopers
+# PHP Naming Convetions for Devlopers
 
 ## Why is it important?
 - **Better Communication**
@@ -20,20 +20,20 @@ The name of a variable, function, or class, should answer all the big questions.
 - **Use intention revealing names**
 Variable name must define the exact explanation of its content so it can documentate itself in case of no documentation.
     ```
-    var d // elapsed time in days
+    $d; // elapsed time in days
     ```
 
     vs
 
     ```
-    var elapsedTimeInDays
+    $elapsedTimeInDays;
     ```
 
 - **Use pronounceable names**
     ```
     class NwClmDmg {
-        private _lyt = 'dashboard';
-        private Date _modymdhms;
+        protected $_lyt = 'dashboard';
+        private Date $_modymdhms;
     }
     ```
 
@@ -41,29 +41,29 @@ Variable name must define the exact explanation of its content so it can documen
 
     ```
     class NewClaimDamage {
-        private _layout = 'dashboard';
-        private Date _modificationTimestamp;
+        protected $_layout = 'dashboard';
+        private Date $_modificationTimestamp;
     }
     ```
 
 - **Use searchable names**
 If a variable or constant might be seen or used in multiple places in a body of code, it is imperative to give it a search-friendly name.
     ```
-    for (int item = 0; item < 34; item++) {
-        s += (t[item] * 4) / 5;
+    for ($item = 0; $item < 34; $item++) {
+        s += ($t[$item] * 4) / 5;
     }
     ```
 
     vs
 
     ```
-    var realDaysPerIdealDay = 4;
+    $realDaysPerIdealDay = 4;
     const WORK_DAYS_PER_WEEK = 5;
-    var sum = 0;
-    for (var item = 0; item < NUMBER_OF_TASKS; item++) {
-        var realTaskDays = taskEstimate[item] * realDaysPerIdealDay;
-        var realTaskWeeks = (realTaskDays / WORK_DAYS_PER_WEEK);
-        sum += realTaskWeeks;
+    $sum = 0;
+    for ($item = 0; $item < NUMBER_OF_TASKS; $item++) {
+        $realTaskDays = $taskEstimate[$item] * $realDaysPerIdealDay;
+        $realTaskWeeks = ($realTaskDays / WORK_DAYS_PER_WEEK);
+        $sum += $realTaskWeeks;
     }
     ```
 
@@ -75,7 +75,7 @@ Use short enough and long enough variable names in each scope of code.
 > Although short, cryptic variable names are to be shunned in favor of longer, descriptive names, that doesn't mean you should be using entire sentences. Extremely long names are inefficient because they make code dirty, hard-to-read-write and leading to possibilty of typo.
 
 
-Before we get into defining conventions, here are several delimiting conventions commonly used in code:
+Before we get into defining naming conventions, here are several delimiting conventions commonly used in code:
 
 - **Snakecase** Words are delimited by an underscore
     ```
@@ -104,29 +104,34 @@ Before we get into defining conventions, here are several delimiting conventions
 Consistency and readability are key ideas that should be utilized in the naming of variables. Regardless of how you choose to name your variables, always ensure that your naming conventions are consistent throughout the code. Consistency allows others to more easily understand your code.
 
 ### Naming Conventions: Variable
-Most often variables are declared with **camelCase**.
+Most often PHP variables are declared with **snake_case**.
 
 ```
-var firstName = 'John';
+$first_name = 'John';
 ```
 
 ### Naming Conventions: Constant
 Constants — intended to be non-changing variables are declared in **ALL CAPS**.
 
 ```
-var SECONDS = 60;
+define('DB_HOST', 'localhost'); // global variable
+
+class Circle {                  // class variable
+  const PI = 3.14;
+}
 ```
+Note : PHP Constants don’t use the $ prefix as the variables do.
 
 ### Naming Conventions: Boolean
 A prefix like `is` , `are` , `has` helps developer to distinguish a boolean from another variable by just looking at it.
 
 ```
-var isVisible = true;
-var hasKey = false;
+$is_visible = true;
 ```
 
 ### Naming Conventions: Function
-Functions names are written in **camelCase**. Always start your function name with a **"Verb"** which defines what that function is trying to do in conjunction with the name of the **"Entity"** being affected by this function.
+In PHP, functions can be written in either **snake_case** or **camelCase**, decide on your approach and keep it consistent.
+Always start your function name with a **"Verb"** which defines what that function is trying to do in conjunction with the name of the **"Entity"** being affected by this function.
 
 ```
 getOrder()
@@ -136,71 +141,49 @@ connectToDatabase()
 ```
 
 ### Naming Conventions: Method
-Like functions, methods names are written in **camelCase**. As class name itself depict "Entity" thus suffixing the "Entity" in a function name doesn’t make sense because it becomes self-explanatory in case of class methods.
+Like functions, methods can be either in **snake_case** or **camelCase**, decide on your approach and keep it consistent.
+As class name itself depict "Entity" thus suffixing the "Entity" in a function name doesn’t make sense because it becomes self-explanatory in case of class methods.
 
 ```
 class User {
-  delete(id) {
+  public function delete($id) {
     // do something
   }
 }
 
-var user = new User();
-console.log(user.delete(2)); // delete the user with ID = 2
+$user = new User();
+$user->delete(2); // Delete the user with ID = 2
 ```
 
 ### Naming Conventions: Class
 A class should be declared with **PascalCase** in its own file.
 
 ```
-class User {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-}
+class Circle {
 
-var user = new User('John', 'Doe');
+}
 ```
 
-### Naming Conventions: Component
-Components are widely declared with **PascalCase** too. When a component gets used, it distinguishes itself from native HTML and web components, because its first letter is always written in uppercase.
+### Naming Conventions: Controller
+Controller are widely declared with **PascalCase** too.
 
 ```
-function UserProfile(user) {
-  return (
-    <div>
-      <span>First Name: {user.firstName}</span>
-      <span>Last Name: {user.lastName}</span>
-    </div>
-  );
+class ClaimDamage extends Controller {
 }
-
-<div>
-  <UserProfile
-    user={{ firstName: 'John', lastName: 'Doe' }}
-  />
-</div>
 ```
 
 ### Naming Conventions: Private
 Private and protected properties in a class MUST BE prefixed with a single underscore.
 
 ```
-class User {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.name = _getName(firstName, lastName);
-  }
+class Circle {
+  public PI = 3.14;
+  private $_radius;
 
-  _getName(firstName, lastName) {
-    return `${firstName} ${lastName}`;
+  private function _calculateArea() {
+    return self::PI * $_radius * $_radius;
   }
 }
-
-var me = new User('John', 'Doe');
-console.log(me.name);
 ```
 
 ### Naming Conventions: Argument
@@ -227,14 +210,14 @@ It is recommended to use K&R Style parentheses because they save one line and se
 
 K&R Style Parentheses
 ```
-if(isVisible) {
+if($isVisible) {
   // do something
 }
 ```
 
 Allman Parentheses
 ```
-if(isVisible)
+if($isVisible)
 {
   // do something
 }
