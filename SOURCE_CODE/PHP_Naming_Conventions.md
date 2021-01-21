@@ -103,6 +103,16 @@ Before we get into defining conventions, here are several delimiting conventions
 
 Consistency and readability are key ideas that should be utilized in the naming of variables. Regardless of how you choose to name your variables, always ensure that your naming conventions are consistent throughout the code. Consistency allows others to more easily understand your code.
 
+
+### Naming Conventions: File
+Filename should follow below conventions:
+- Letters MUST be all **lowercase**
+- Words MUST be separated with a **hyphen**
+```
+order.php
+order-info.php
+```
+
 ### Naming Conventions: Variable
 Most often PHP variables are declared with **snake_case**.
 
