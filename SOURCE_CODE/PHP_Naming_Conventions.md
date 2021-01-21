@@ -107,10 +107,10 @@ Consistency and readability are key ideas that should be utilized in the naming 
 ### Naming Conventions: File
 Filename should follow below conventions:
 - Letters MUST be all **lowercase**
-- Words MUST be separated with a **hyphen**
+- Words MUST be separated with a **underscore**
 ```
 order.php
-order-info.php
+order_info.php
 ```
 
 ### Naming Conventions: Variable
