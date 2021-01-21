@@ -94,9 +94,9 @@ Before we get into defining conventions, here are several delimiting conventions
 
 - **Hungarian Notation** This notation describes the variable type or purpose at the start of the variable name, followed by a descriptor that indicates the variable’s function. The Camelcase notation is used to delimit words.
     ```
-    arrCompanyGroup     // Array called Company Group”
-    sUserName           // String called “User Name”
-    iRandomSeed         // Integer called “Random Seed”
+    arrCompanyGroup     // Array called "Company Group"
+    sUserName           // String called "User Name"
+    iRandomSeed         // Integer called "Random Seed"
     ```
 
 ## Naming Conventions

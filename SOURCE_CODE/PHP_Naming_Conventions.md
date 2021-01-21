@@ -75,7 +75,7 @@ Use short enough and long enough variable names in each scope of code.
 > Although short, cryptic variable names are to be shunned in favor of longer, descriptive names, that doesn't mean you should be using entire sentences. Extremely long names are inefficient because they make code dirty, hard-to-read-write and leading to possibilty of typo.
 
 
-Before we get into defining naming conventions, here are several delimiting conventions commonly used in code:
+Before we get into defining conventions, here are several delimiting conventions commonly used in code:
 
 - **Snakecase** Words are delimited by an underscore
     ```
@@ -94,9 +94,9 @@ Before we get into defining naming conventions, here are several delimiting conv
 
 - **Hungarian Notation** This notation describes the variable type or purpose at the start of the variable name, followed by a descriptor that indicates the variable’s function. The Camelcase notation is used to delimit words.
     ```
-    arrCompanyGroup     // Array called Company Group”
-    sUserName           // String called “User Name”
-    iRandomSeed         // Integer called “Random Seed”
+    arrCompanyGroup     // Array called "Company Group"
+    sUserName           // String called "User Name"
+    iRandomSeed         // Integer called "Random Seed"
     ```
 
 ## Naming Conventions
