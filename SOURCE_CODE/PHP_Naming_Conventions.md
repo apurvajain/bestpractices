@@ -1,11 +1,11 @@
-# PHP Naming Conventions for Devlopers
+# PHP Naming Convetions for Devlopers
 
 ## Why is it important?
 - **Better Communication**
 Building a product is always a *Team Effort* which requires making sure that everyone understands the *names* that we name, we got to name them clearly.
 
 - **Easy Management**
-Developers don't hesitate to touch the code of peer members due to difference in coding conventions.
+Developers don't hesitate to touch the code of peer members due to difference in coding convetions.
 
 - **Easy Reviewing**
 Consistent code conventions makes reviewing things easier as we don’t have to find out what something means.
