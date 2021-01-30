@@ -10,7 +10,6 @@ It is important to communicate the nature of changes in your projects in order t
 - **Squeeze the most out of git utilities**
 `$ git log` is a beautiful and useful snippet. A well-organized commit message history leads to more readable messages that are easy to follow when looking through the project history. Suddenly, navigating through the log output become a possible mission! Embracing a commit message convention will also help you properly use other git commands like git blame, git revert, git rebase, git shortlog and other git subcommands.
 
-
 ## Key to writing better commit messages
 The most important part of a commit message is that it should be clear and meaningful. In the long run, writing good commit messages shows how much of a collaborator you are. The benefits of writing good commit messages are not only limited to your team, but indeed expand to yourself and future contributors.
 
