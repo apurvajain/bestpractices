@@ -111,9 +111,14 @@ Basically, Firebase Remote Config’s working strategy depends on three main ter
 
 ### Switch for a crisis time
 ### Setting configuration parameters, hosts, and URLs
-### Easy roll-back of a buggy feature
-### Different values for different conditions for the A/B test
 ### Pass any JSON object like translations strings, etc
+### Different values for different conditions for the A/B test
+### User targeting
+### Deploy & release when you want
+### Infrastructure migration & maintenance mode
+### Subscription management
+### Empower customer facing teams
+### Sunset Features (Gradual Phase out)
 
 ## Advantages
 - Completely free out-of-the-box solution
@@ -139,6 +144,10 @@ If you change a value in the console — it will take some time for your app to 
 Parameter keys can be up to 256 characters long, must start with an underscore or (A-Z, a-z), and may also include numbers. The total length of parameter value strings within a project cannot exceed 800,000 characters.
 
 - **You may have up to 500 conditions**
+
+
+## Usage & Adoption
+
 
 <!-- DON’T use Remote Config with user authantication to make update content>
 <! -- DON’T change the requirements of application’s platform.>
