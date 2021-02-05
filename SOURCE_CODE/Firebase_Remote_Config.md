@@ -26,7 +26,7 @@ Wouldn’t it be nice if you could make some of these tweaks without having to g
 - **App defaults updation**
 
     Change your application’s defaults without republishing new version or waiting for user to update the app.
-    ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_process.png?raw=true "Title")
+    <!-- ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_process.png?raw=true "Title") -->
 
     - Remote Config is a server-side stored JSON file which supports the following data types:
         - String
@@ -43,7 +43,7 @@ Wouldn’t it be nice if you could make some of these tweaks without having to g
 
     Customize your application appearances for different user segmentation by making use of conditions, which use targeting rules to deliver specific values for different users.
 
-    ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_segmentation.png?raw=true "Title")![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_conditional.png?raw=true "Title")
+    <!-- ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_segmentation.png?raw=true "Title")![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_conditional.png?raw=true "Title") -->
 
     - Firebase Remote Config allows maintaining multiple remote config values for a single  parameter based on different conditions:
         - Operating System
@@ -64,7 +64,7 @@ Wouldn’t it be nice if you could make some of these tweaks without having to g
 
     Ability to improve your application with A/B testings (gauge the impact of making certain changes without affecting your app's conversion rate).
 
-    ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_testing.png?raw=true "Title")![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_rollouts.png?raw=true "Title")
+    <!-- ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_testing.png?raw=true "Title")![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_rollouts.png?raw=true "Title") -->
 
     - Firebase Remote Config works with A/B Testing allowing user to setup and run experiments to test changes to your app
 
@@ -94,7 +94,7 @@ Remote Config includes a **client library** that handles important tasks like **
 
 This image below shows how parameter values are prioritized in the Remote Config back end and in our app:
 
-![How parameter values are prioritized in the service and your app](../docs/images/firebase_remote_config_priority.png?raw=true "Title")
+<!-- ![How parameter values are prioritized in the service and your app](../docs/images/firebase_remote_config_priority.png?raw=true "Title") -->
 
 From the above graph we can see two sides:
 
