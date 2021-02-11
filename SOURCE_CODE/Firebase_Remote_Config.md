@@ -26,7 +26,7 @@ Wouldn’t it be nice if you could make some of these tweaks without having to g
 - **App defaults updation**
 
     Change your application’s defaults without republishing new version or waiting for user to update the app.
-    <!-- ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_process.png?raw=true "Title") -->
+    ![How parameter values are prioritized in the Remote Config](../docs/images/firebase_remote_config_process.png?raw=true "Title")
 
     - Remote Config is a server-side stored JSON file which supports the following data types:
         - String
@@ -35,7 +35,7 @@ Wouldn’t it be nice if you could make some of these tweaks without having to g
 
     - Provides support for Android, iOS, Web, C++, Unity and backend APIs
 
-    - Ability to override in-app default values by defining server-side parameter values 
+    - Ability to override in-app default values by defining server-side parameter values
 
 
 
@@ -118,7 +118,7 @@ Basically, Firebase Remote Config’s working strategy depends on three main ter
 ### Infrastructure migration & maintenance mode
 ### Subscription management
 ### Empower customer facing teams
-### Sunset Features (Gradual Phase out)
+### Sunset Features (Gradual Phase out) - Easy deprecation
 
 ## Advantages
 - Completely free out-of-the-box solution
@@ -147,8 +147,21 @@ Parameter keys can be up to 256 characters long, must start with an underscore o
 
 
 ## Usage & Adoption
+## Pricing structure for use cases
+[Documented here](https://firebase.google.com/pricing)
 
 
-<!-- DON’T use Remote Config with user authantication to make update content>
-<! -- DON’T change the requirements of application’s platform.>
+
+<!--
+DON’T use Remote Config with user authantication to make update content
+DON’T change the requirements of application’s platform
+
+1. PD
+2. Assest - Codify
+3. Githuben
+4. one firm github slack
+5. firebase
+6. Box
+7. **Dynamic** updates without
+-->
 
