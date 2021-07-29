@@ -1,4 +1,4 @@
-# Project Name: O2C Krasmart Connect
+# Project Name: XYZ
 
 ## Release Checklist Template
 This list contains items that need to be completed before software can be released. Fill in the "person responsible" column with the name of the actual person on your team
