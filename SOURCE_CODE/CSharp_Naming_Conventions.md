@@ -1,5 +1,5 @@
 
-# C# Naming Conventions for Devlopers
+# C# Naming Conventions for Developers
 
 ## Naming Conventions
 
